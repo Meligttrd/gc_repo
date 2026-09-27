@@ -1,0 +1,6 @@
+{
+  "files.associations": { ".env.example": "dotenv" },
+  "files.exclude": { "node_modules": true },
+  "editor.tabSize": 2,
+  "files.eol": "\n"
+}

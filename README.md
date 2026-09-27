@@ -31,6 +31,25 @@ npm run seed              # facultatif : données de démonstration (vendeur « 
 npm start                 # http://localhost:3000
 ```
 
+Au démarrage, le terminal affiche les adresses à ouvrir :
+
+```
+Caisse GC démarrée
+  Sur cet ordinateur : http://localhost:3000
+  Sur le réseau local : http://192.168.1.20:3000   ← à ouvrir sur une tablette ou un téléphone du même Wi-Fi
+```
+
+Le fichier **`.env`** (port, adresse d'écoute, base de données, clés d'import) est créé automatiquement à partir de `.env.example` lors de `npm install` ou `npm start`. Il n'est pas envoyé sur GitHub. Avec `HOST=127.0.0.1`, la caisse n'est accessible que depuis l'ordinateur. Au premier lancement, autorisez Node.js dans le pare-feu (Windows) pour que les tablettes puissent s'y connecter.
+
+### Dans VS Code
+
+1. **Fichier → Ouvrir le dossier…** et choisissez `caissegc` (acceptez les extensions recommandées : coloration du `.env` et visualiseur de base SQLite).
+2. Dans le **Terminal** (Ctrl + `), lancez `npm install` une première fois.
+3. Appuyez sur **F5** (ou **Exécuter et déboguer → « Démarrer la caisse »**) : la caisse démarre et s'ouvre dans le navigateur.
+4. Pour les autres actions, utilisez **Terminal → Exécuter la tâche…** : données de démonstration, import, tests, démarrage avec rechargement automatique.
+
+### Autres commandes
+
 - `npm run dev` : redémarre le serveur à chaque modification
 - `npm test` : tests automatiques
 
