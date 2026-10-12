@@ -20,7 +20,17 @@ Nouvel outil logiciel de caisse pour GC : une caisse enregistreuse web, tactile 
 | **Gestion** | Articles, catégories (couleurs), stock, vendeurs, statistiques (CA par jour, panier moyen, meilleurs articles) |
 | **Import** | Import des articles, catégories, clients et vendeurs depuis caisse.enregistreuse.fr (API ou exports CSV/JSON) |
 
-## Démarrage
+## Installation en un double-clic
+
+1. Sur GitHub, choisissez la branche **feat/v1_caisse**, puis **Code → Download ZIP**, et décompressez le fichier.
+2. Dans le dossier obtenu, double-cliquez sur :
+   - **Windows** : `installer-windows.bat`. Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur **Informations complémentaires → Exécuter quand même**.
+   - **Mac** : `installer-mac.command`. La première fois, faites **clic droit → Ouvrir**.
+3. Le script installe Node.js si besoin, puis les dépendances et les données de démonstration. Il démarre ensuite la caisse et ouvre **http://localhost:3000**. Laissez la fenêtre ouverte pendant l'utilisation.
+
+Pour relancer la caisse plus tard, double-cliquez de nouveau sur le même fichier : vos données sont conservées.
+
+## Démarrage manuel
 
 Prérequis : **Node.js 22.13 ou plus récent** (la base SQLite utilise le module intégré `node:sqlite`, sans compilation).
 
