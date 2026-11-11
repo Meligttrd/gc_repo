@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Caisse GC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" id="shop-name">Caisse GC</div>
+    <nav id="nav">
+      <a href="#caisse" data-view="caisse">Caisse</a>
+      <a href="#tickets" data-view="tickets">Tickets</a>
+      <a href="#cloture" data-view="cloture">Clôture</a>
+      <a href="#articles" data-view="articles">Articles</a>
+      <a href="#clients" data-view="clients">Clients</a>
+      <a href="#stats" data-view="stats">Statistiques</a>
+      <a href="#parametres" data-view="parametres">Paramètres</a>
+    </nav>
+    <button class="seller-badge" id="seller-badge" title="Changer de vendeur">—</button>
+  </header>
+
+  <main id="view"></main>
+
+  <!-- Fenêtre modale générique -->
+  <dialog id="modal">
+    <form method="dialog" class="modal-inner" id="modal-content"></form>
+  </dialog>
+
+  <!-- Zone d'impression du ticket (80 mm) -->
+  <div id="print-area"></div>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

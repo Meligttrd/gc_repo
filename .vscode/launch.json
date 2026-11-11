@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Démarrer la caisse",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/server.js",
+      "runtimeArgs": ["--no-warnings=ExperimentalWarning"],
+      "envFile": "${workspaceFolder}/.env",
+      "preLaunchTask": "Préparer le .env",
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "Sur cet ordinateur : (https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Lancer les tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["--no-warnings=ExperimentalWarning", "--test", "test/**/*.test.js"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

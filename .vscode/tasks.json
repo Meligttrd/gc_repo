@@ -1,0 +1,10 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "Préparer le .env", "type": "shell", "command": "node scripts/setup-env.js", "presentation": { "reveal": "silent" } },
+    { "label": "Caisse : démarrer (rechargement auto)", "type": "npm", "script": "dev", "isBackground": true, "problemMatcher": [] },
+    { "label": "Caisse : données de démonstration", "type": "npm", "script": "seed", "problemMatcher": [] },
+    { "label": "Caisse : import caisse.enregistreuse.fr", "type": "npm", "script": "import:ce", "problemMatcher": [] },
+    { "label": "Caisse : tests", "type": "npm", "script": "test", "group": { "kind": "test", "isDefault": true }, "problemMatcher": [] }
+  ]
+}

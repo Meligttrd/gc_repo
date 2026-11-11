@@ -1,0 +1,24 @@
+{
+  "name": "caissegc",
+  "version": "0.1.0",
+  "description": "Caisse enregistreuse sur mesure pour GC (base reprenant les fonctions de caisse.enregistreuse.fr)",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "postinstall": "node scripts/setup-env.js",
+    "prestart": "node scripts/setup-env.js",
+    "predev": "node scripts/setup-env.js",
+    "start": "node --env-file-if-exists=.env --no-warnings=ExperimentalWarning src/server.js",
+    "dev": "node --no-warnings=ExperimentalWarning --watch --env-file-if-exists=.env src/server.js",
+    "seed": "node --no-warnings=ExperimentalWarning --env-file-if-exists=.env scripts/seed.js",
+    "import:ce": "node --no-warnings=ExperimentalWarning --env-file-if-exists=.env scripts/import-caisse-enregistreuse.js",
+    "test": "node --no-warnings=ExperimentalWarning --test \"test/**/*.test.js\""
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
